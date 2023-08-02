@@ -1,0 +1,222 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Poppins";
+
+  font-display: swap;
+  src: url("../fonts/poppins/Poppins-Regular.woff2") format("woff2"),
+       url("../fonts/poppins/Poppins-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Poppins";
+
+  font-display: swap;
+  src: url("../fonts/poppins/Poppins-Medium.woff2") format("woff2"),
+       url("../fonts/poppins/Poppins-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Poppins";
+
+  font-display: swap;
+  src: url("../fonts/poppins/Poppins-Bold.woff2") format("woff2"),
+       url("../fonts/poppins/Poppins-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src: url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"),
+       url("../fonts/roboto/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src: url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"),
+       url("../fonts/roboto/Roboto-Medium.woff") format("woff");
+}
+
+:root {
+  --color-mentol: #ECF7F3;
+  --color-green: #48B774;
+  --color-orange: #FF8345;
+  --color-orange2: #FD905A;
+  --color-orange-active: #FB9B69;
+  --color-black: #2D2D2D;
+  --color-white: #ffffff;
+  --color-gray: #7c7c7c;
+  --color-dark-gray: #4A4A4A;
+  --color-medium-gray: #707070;
+  --color-light-gray: #A1A1A1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.page {
+  margin: 0;
+  background-color: var(--color-mentol);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--color-gray);
+  font-weight: 500;
+}
+
+.button {
+  display: flex;
+  background-color: var(--color-green);
+  color: #ffffff;
+  text-decoration: none;
+  justify-content: center;
+  border: none;
+  border-radius: 1000px;
+  padding: 9px 20px;
+  min-height: 42px;
+  min-width: 55px;
+  line-height: normal;
+}
+
+.page-header {
+  display: flex;
+  width: 1180px;
+  padding: 30px 31px 30px 36px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 118px;
+}
+
+.logo-link {
+  display: inline-block;
+  margin-right: auto;
+}
+
+.logo-conteiner {
+  display: flex;
+}
+
+.header-navigation {
+  margin-right: auto;
+  margin-left: 67px;
+}
+
+.navigation-list {
+  display: flex;
+  min-width: 365px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-top: 8px;
+}
+
+.navigation-item {
+  margin-bottom: 6px;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 42px;
+}
+
+.navigation-item.active {
+  position: relative;
+}
+
+.navigation-item.active::after {
+  content: "";
+  width: 21px;
+  height: 2px;
+  background-color: var(--color-orange-active);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+}
+
+.navigation-link {
+  color:var(--color-dark-gray);
+  text-decoration: none;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+}
+
+.sign-up {
+  margin-left: 42px;
+  padding: 9px 23px;
+}
+
+.page-main {
+  display: flex;
+  width: 1180px;
+  padding: 0 0 44px 39px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 118px;
+}
+
+.hero-title {
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--color-black);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.hero-title .emphasis {
+  color: var(--color-orange);
+
+}
+
+.emphasis {
+  text-decoration: none;
+}
+
+.hero-description {
+  margin-top: 0;
+  margin-bottom: 30px;
+  width: 450px;
+}
+
+.hero-button {
+  width: fit-content;
+  padding: 11.5px 21px;
+  margin-bottom: 50px;
+}

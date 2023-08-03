@@ -60,6 +60,7 @@
   --color-dark-gray: #4A4A4A;
   --color-medium-gray: #707070;
   --color-light-gray: #A1A1A1;
+  --color-light: #E8E8E8;
 }
 
 *,
@@ -200,9 +201,8 @@
   margin-bottom: 22px;
 }
 
-.hero-title .emphasis {
+.emphasis {
   color: var(--color-orange);
-
 }
 
 .emphasis {
@@ -220,3 +220,263 @@
   padding: 11.5px 21px;
   margin-bottom: 50px;
 }
+
+.search-form {
+  margin-bottom: 40px;
+}
+
+.search-group {
+  position: relative;
+  display: flex;
+}
+
+.search-field {
+  height: 62px;
+  width: 597px;
+  padding: 21px 101px 21px 40px;
+  border: none;
+  border-radius: 1000px;
+  color: #2D2D2D;
+}
+
+.search-field,
+.search-field::placeholder {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+
+.search-field::placeholder {
+  color: var(--color-light-gray);
+  opacity: 1;
+}
+
+.search-button {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  right: 6px;
+  top: 2.5px;
+}
+
+.search-button::before {
+  content: url(../images/search-icon.svg);
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-wrapper {
+  display: flex;
+}
+
+.user-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  margin-right: 12px;
+  height: fit-content;
+}
+
+.user-item {
+  width: 38px;
+  height: 38px;
+}
+
+.user-item:not(:last-child) {
+  margin-right: -16px;
+}
+
+.user-item:first-child {
+  position: relative;
+  z-index: 5;
+}
+
+.user-item:nth-child(2) {
+  position: relative;
+  z-index: 4;
+}
+
+.user-item:nth-child(3) {
+  position: relative;
+  z-index: 3;
+}
+
+.user-item:nth-child(4) {
+  position: relative;
+  z-index: 2;
+}
+
+.user-link {
+  display: inline-block;
+  min-width: 38px;
+  min-height: 38px;
+}
+.user-photo-container {
+  display: flex;
+  width: 38px;
+  height: 38px;
+}
+
+.user-photo {
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+}
+
+.add-user {
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  background-color: var(--color-orange);
+}
+
+.add-user .user-link::before,
+.add-user .user-link::after {
+  content: "";
+  background-color: var(--color-white);
+  width: 13px;
+  height: 2px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.add-user .user-link::after {
+  transform: translate(-50%) rotate(90deg);
+}
+
+
+.user-description {
+  margin: auto 0;
+  color: var(--color-medium-gray);
+}
+
+.animation-wrapper {
+  margin-left: -115px;
+  position: relative;
+}
+
+.animation-image-container {
+  display: flex;
+}
+
+.circle {
+  background-color: var(--color-green);
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  bottom: 204px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.circle-empty {
+  background-color: transparent;
+  border: 2px solid var(--color-light);
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  bottom: 151px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -3;
+}
+
+.flag-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  bottom: 151px;
+  transform: translateX(-50%);
+  width: 450px;
+  height: 450px;
+}
+
+.flag-item {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.flag-container {
+  display: flex;
+}
+
+.flag-img {
+  object-fit: cover;
+  border-radius: 50%;
+  outline: 10px solid var(--color-white);
+}
+
+.flag-item:nth-child(1) {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotateZ(255deg);
+  transform-origin: 15px 240px;
+  animation: flags-animation 10s infinite;
+}
+
+.flag-item:nth-child(1) .flag-container {
+  transform: rotateZ(-255deg);
+  animation: container-animation 10s infinite;
+}
+
+.flag-item:nth-child(2) {
+  left: 30px;
+  top: 117px;
+}
+
+.flag-item:nth-child(3) {
+  left: 245px;
+  top: 1px;
+}
+
+.flag-item:nth-child(4) {
+  left: 421px;
+  top: 122px;
+}
+
+.flag-item:nth-child(5) {
+  left: 445px;
+  top: 272px;
+}
+
+.flag-item:nth-child(6) {
+  left: 205px;
+  top: 449px;
+}
+
+/* @keyframes flags-animation {
+  from {
+    left: 100%;
+    top: 0;
+  }
+  10% {
+    left: 0;
+    top: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes container-animation {
+  to {
+    transform: rotateZ(-255deg);
+  }
+} */
